@@ -114,7 +114,7 @@ TEST(PracticeTest, given_in_desc_order_false)
     obj.sortDescending(first, second, third);
     ASSERT_FALSE(first == 3);
     ASSERT_FALSE(second == 4);
-    ASSERT_FALSE(third == 2);
+    ASSERT_TRUE(third == 2);
 }
 
 TEST(PracticeTest, given_two_of_the_same_value)
