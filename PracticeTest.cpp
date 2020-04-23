@@ -95,134 +95,242 @@ TEST(PracticeTest, tattarrattat_palindrome)
 
 // Tests for sortDescending
 
-TEST(PracticeTest, given_in_asc_order)
+TEST(PracticeTest, given_in_asc_order_test_first)
 {
     Practice obj;
     int first = 2;
     int second = 3;
     int third = 4;
     obj.sortDescending(first, second, third);
-    ASSERT_TRUE(first == 4);
-    ASSERT_TRUE(second == 3);
-    ASSERT_TRUE(third == 2);
+    ASSERT_EQ(first, 4);
 }
 
-TEST(PracticeTest, given_in_desc_order)
-{
-    Practice obj;
-    int first = 4;
-    int second = 3;
-    int third = 2;
-    obj.sortDescending(first, second, third);
-    ASSERT_TRUE(first == 4);
-    ASSERT_TRUE(second == 3);
-    ASSERT_TRUE(third == 2);
-}
-
-TEST(PracticeTest, given_in_desc_order_false)
-{
-    Practice obj;
-    int first = 4;
-    int second = 3;
-    int third = 2;
-    obj.sortDescending(first, second, third);
-    ASSERT_FALSE(first == 3);
-    ASSERT_FALSE(second == 4);
-    ASSERT_TRUE(third == 2);
-}
-
-TEST(PracticeTest, given_two_of_the_same_value)
-{
-    Practice obj;
-    int first = 4;
-    int second = 3;
-    int third = 4;
-    obj.sortDescending(first, second, third);
-    ASSERT_TRUE(first == 4);
-    ASSERT_TRUE(second == 4);
-    ASSERT_TRUE(third == 3);
-}
-
-TEST(PracticeTest, given_two_of_the_same_value_false)
-{
-    Practice obj;
-    int first = 4;
-    int second = 3;
-    int third = 4;
-    obj.sortDescending(first, second, third);
-    ASSERT_FALSE(first == 3);
-    ASSERT_TRUE(second == 4);
-    ASSERT_FALSE(third == 4);
-}
-
-TEST(PracticeTest, given_two_of_the_same_value_dif_order)
-{
-    Practice obj;
-    int first = 3;
-    int second = 4;
-    int third = 4;
-    obj.sortDescending(first, second, third);
-    ASSERT_TRUE(first == 4);
-    ASSERT_TRUE(second == 4);
-    ASSERT_TRUE(third == 3);
-}
-
-TEST(PracticeTest, mixed_order_243)
+TEST(PracticeTest, given_in_asc_order_test_second)
 {
     Practice obj;
     int first = 2;
-    int second = 4;
-    int third = 3;
+    int second = 3;
+    int third = 4;
     obj.sortDescending(first, second, third);
-    ASSERT_TRUE(first == 4);
-    ASSERT_TRUE(second == 3);
-    ASSERT_TRUE(third == 2);
+    ASSERT_EQ(second, 3);
 }
 
-TEST(PracticeTest, mixed_order_423)
+TEST(PracticeTest, given_in_asc_order_test_third)
+{
+    Practice obj;
+    int first = 2;
+    int second = 3;
+    int third = 4;
+    obj.sortDescending(first, second, third);
+    ASSERT_EQ(third, 2);
+}
+
+TEST(PracticeTest, given_in_desc_order_test_first)
 {
     Practice obj;
     int first = 4;
-    int second = 2;
-    int third = 3;
+    int second = 3;
+    int third = 2;
     obj.sortDescending(first, second, third);
-    ASSERT_TRUE(first == 4);
-    ASSERT_TRUE(second == 3);
-    ASSERT_TRUE(third == 2);
+    ASSERT_EQ(first, 4);
 }
 
-TEST(PracticeTest, mixed_order_342)
+TEST(PracticeTest, given_in_desc_order_test_second)
+{
+    Practice obj;
+    int first = 4;
+    int second = 3;
+    int third = 2;
+    obj.sortDescending(first, second, third);
+    ASSERT_EQ(second, 3);
+}
+
+TEST(PracticeTest, given_in_desc_order_test_third)
+{
+    Practice obj;
+    int first = 4;
+    int second = 3;
+    int third = 2;
+    obj.sortDescending(first, second, third);
+    ASSERT_EQ(third, 2);
+}
+
+TEST(PracticeTest, test_dissimilar_value_less_than_matching_pair)
 {
     Practice obj;
     int first = 3;
     int second = 4;
-    int third = 2;
-    obj.sortDescending(first, second, third);
-    ASSERT_TRUE(first == 4);
-    ASSERT_TRUE(second == 3);
-    ASSERT_TRUE(third == 2);
-}
-
-TEST(PracticeTest, mixed_order_324)
-{
-    Practice obj;
-    int first = 3;
-    int second = 2;
     int third = 4;
     obj.sortDescending(first, second, third);
-    ASSERT_TRUE(first == 4);
-    ASSERT_TRUE(second == 3);
-    ASSERT_TRUE(third == 2);
+    ASSERT_EQ(third, 3);
 }
 
-TEST(PracticeTest, negative_test)
+TEST(PracticeTest, test_dissimilar_value_greater_than_matching_pair)
+{
+    Practice obj;
+    int first = 5;
+    int second = 4;
+    int third = 4;
+    obj.sortDescending(first, second, third);
+    ASSERT_EQ(first, 5);
+}
+
+TEST(PracticeTest, test_all_matching)
+{
+    Practice obj;
+    int first = 4;
+    int second = 4;
+    int third = 4;
+    obj.sortDescending(first, second, third);
+    ASSERT_EQ(first, 4);
+}
+
+TEST(PracticeTest, negative_test_first)
 {
     Practice obj;
     int first = -3;
     int second = -2;
     int third = -4;
     obj.sortDescending(first, second, third);
-    ASSERT_TRUE(first == -2);
-    ASSERT_TRUE(second == -3);
-    ASSERT_TRUE(third == -4);
+    ASSERT_EQ(first, -2);
+}
+
+TEST(PracticeTest, negative_test_second)
+{
+    Practice obj;
+    int first = -3;
+    int second = -2;
+    int third = -4;
+    obj.sortDescending(first, second, third);
+    ASSERT_EQ(second, -3);
+}
+
+TEST(PracticeTest, negative_test_third)
+{
+    Practice obj;
+    int first = -3;
+    int second = -2;
+    int third = -4;
+    obj.sortDescending(first, second, third);
+    ASSERT_EQ(third, -4);
+}
+
+TEST(PracticeTest, mixed_order_243_test_first)
+{
+    Practice obj;
+    int first = 2;
+    int second = 4;
+    int third = 3;
+    obj.sortDescending(first, second, third);
+    ASSERT_EQ(first, 4);
+}
+
+TEST(PracticeTest, mixed_order_243_test_second)
+{
+    Practice obj;
+    int first = 2;
+    int second = 4;
+    int third = 3;
+    obj.sortDescending(first, second, third);
+    ASSERT_EQ(second, 3);
+}
+
+TEST(PracticeTest, mixed_order_243_test_third)
+{
+    Practice obj;
+    int first = 2;
+    int second = 4;
+    int third = 3;
+    obj.sortDescending(first, second, third);
+    ASSERT_EQ(third, 2);
+}
+
+TEST(PracticeTest, mixed_order_423_test_first)
+{
+    Practice obj;
+    int first = 4;
+    int second = 2;
+    int third = 3;
+    obj.sortDescending(first, second, third);
+    ASSERT_EQ(first, 4);
+}
+
+TEST(PracticeTest, mixed_order_423_test_second)
+{
+    Practice obj;
+    int first = 4;
+    int second = 2;
+    int third = 3;
+    obj.sortDescending(first, second, third);
+    ASSERT_EQ(second, 3);
+}
+
+TEST(PracticeTest, mixed_order_423_test_third)
+{
+    Practice obj;
+    int first = 4;
+    int second = 2;
+    int third = 3;
+    obj.sortDescending(first, second, third);
+    ASSERT_EQ(third, 2);
+}
+
+TEST(PracticeTest, mixed_order_342_test_first)
+{
+    Practice obj;
+    int first = 3;
+    int second = 4;
+    int third = 2;
+    obj.sortDescending(first, second, third);
+    ASSERT_EQ(first, 4);
+}
+
+TEST(PracticeTest, mixed_order_342_test_second)
+{
+    Practice obj;
+    int first = 3;
+    int second = 4;
+    int third = 2;
+    obj.sortDescending(first, second, third);
+    ASSERT_EQ(second, 3);
+}
+
+TEST(PracticeTest, mixed_order_342_test_third)
+{
+    Practice obj;
+    int first = 3;
+    int second = 4;
+    int third = 2;
+    obj.sortDescending(first, second, third);
+    ASSERT_EQ(third, 2);
+}
+
+TEST(PracticeTest, mixed_order_324_test_first)
+{
+    Practice obj;
+    int first = 3;
+    int second = 2;
+    int third = 4;
+    obj.sortDescending(first, second, third);
+    ASSERT_EQ(first, 4);
+}
+
+TEST(PracticeTest, mixed_order_324_test_second)
+{
+    Practice obj;
+    int first = 3;
+    int second = 2;
+    int third = 4;
+    obj.sortDescending(first, second, third);
+    ASSERT_EQ(second, 3);
+}
+
+TEST(PracticeTest, mixed_order_324_test_third)
+{
+    Practice obj;
+    int first = 3;
+    int second = 2;
+    int third = 4;
+    obj.sortDescending(first, second, third);
+    ASSERT_EQ(third, 2);
 }
