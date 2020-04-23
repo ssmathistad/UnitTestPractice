@@ -72,6 +72,20 @@ TEST(PracticeTest, racecpr_not_palindrome)
     ASSERT_FALSE(actual);
 }
 
+TEST(PracticeTest, raar_palindrome)
+{
+    Practice obj;
+    bool actual = obj.isPalindrome("raar");
+    ASSERT_TRUE(actual);
+}
+
+TEST(PracticeTest, raal_not_palindrome)
+{
+    Practice obj;
+    bool actual = obj.isPalindrome("raal");
+    ASSERT_FALSE(actual);
+}
+
 TEST(PracticeTest, tattarrattat_palindrome)
 {
     Practice obj;
@@ -199,4 +213,16 @@ TEST(PracticeTest, mixed_order_324)
     ASSERT_TRUE(first == 4);
     ASSERT_TRUE(second == 3);
     ASSERT_TRUE(third == 2);
+}
+
+TEST(PracticeTest, negative_test)
+{
+    Practice obj;
+    int first = -3;
+    int second = -2;
+    int third = -4;
+    obj.sortDescending(first, second, third);
+    ASSERT_TRUE(first == -2);
+    ASSERT_TRUE(second == -3);
+    ASSERT_TRUE(third == -4);
 }
