@@ -81,12 +81,24 @@ TEST(PracticeTest, tattarrattat_palindrome)
 
 // Tests for sortDescending
 
-TEST(PracticeTest, in_asc_order)
+TEST(PracticeTest, given_in_asc_order)
 {
     Practice obj;
-    first = 2;
+    int first = 2;
+    int second = 3;
+    int third = 4;
+    obj.sortDescending(first, second, third);
+    ASSERT_TRUE(first == 4);
+    ASSERT_TRUE(second == 3);
+    ASSERT_TRUE(third == 2);
+}
+
+TEST(PracticeTest, given_in_desc_order)
+{
+    Practice obj;
+    first = 4;
     second = 3;
-    third = 4;
+    third = 2;
     obj.sortDescending(first, second, third);
     ASSERT_TRUE(first == 4);
     ASSERT_TRUE(second == 3);
