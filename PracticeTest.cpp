@@ -137,7 +137,7 @@ TEST(PracticeTest, given_two_of_the_same_value_false)
     int third = 4;
     obj.sortDescending(first, second, third);
     ASSERT_FALSE(first == 3);
-    ASSERT_FALSE(second == 4);
+    ASSERT_TRUE(second == 4);
     ASSERT_FALSE(third == 4);
 }
 
