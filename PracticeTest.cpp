@@ -96,9 +96,9 @@ TEST(PracticeTest, given_in_asc_order)
 TEST(PracticeTest, given_in_desc_order)
 {
     Practice obj;
-    first = 4;
-    second = 3;
-    third = 2;
+    int first = 4;
+    int second = 3;
+    int third = 2;
     obj.sortDescending(first, second, third);
     ASSERT_TRUE(first == 4);
     ASSERT_TRUE(second == 3);
