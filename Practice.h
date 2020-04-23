@@ -2,8 +2,6 @@
 #define PRACTICE_H
 
 #include <string>
-#include <bits/stdc++.h> 
-using namespace std;
 
 using std::string;
 

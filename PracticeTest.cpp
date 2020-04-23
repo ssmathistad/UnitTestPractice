@@ -104,3 +104,99 @@ TEST(PracticeTest, given_in_desc_order)
     ASSERT_TRUE(second == 3);
     ASSERT_TRUE(third == 2);
 }
+
+TEST(PracticeTest, given_in_desc_order_false)
+{
+    Practice obj;
+    int first = 4;
+    int second = 3;
+    int third = 2;
+    obj.sortDescending(first, second, third);
+    ASSERT_FALSE(first == 3);
+    ASSERT_FALSE(second == 4);
+    ASSERT_FALSE(third == 2);
+}
+
+TEST(PracticeTest, given_two_of_the_same_value)
+{
+    Practice obj;
+    int first = 4;
+    int second = 3;
+    int third = 4;
+    obj.sortDescending(first, second, third);
+    ASSERT_TRUE(first == 4);
+    ASSERT_TRUE(second == 4);
+    ASSERT_TRUE(third == 3);
+}
+
+TEST(PracticeTest, given_two_of_the_same_value_false)
+{
+    Practice obj;
+    int first = 4;
+    int second = 3;
+    int third = 4;
+    obj.sortDescending(first, second, third);
+    ASSERT_FALSE(first == 3);
+    ASSERT_FALSE(second == 4);
+    ASSERT_FALSE(third == 4);
+}
+
+TEST(PracticeTest, given_two_of_the_same_value)
+{
+    Practice obj;
+    int first = 4;
+    int second = 3;
+    int third = 4;
+    obj.sortDescending(first, second, third);
+    ASSERT_TRUE(first == 4);
+    ASSERT_TRUE(second == 4);
+    ASSERT_TRUE(third == 3);
+}
+
+TEST(PracticeTest, mixed_order_1)
+{
+    Practice obj;
+    int first = 2;
+    int second = 4;
+    int third = 3;
+    obj.sortDescending(first, second, third);
+    ASSERT_TRUE(first == 4);
+    ASSERT_TRUE(second == 3);
+    ASSERT_TRUE(third == 2);
+}
+
+TEST(PracticeTest, mixed_order_2)
+{
+    Practice obj;
+    int first = 4;
+    int second = 2;
+    int third = 3;
+    obj.sortDescending(first, second, third);
+    ASSERT_TRUE(first == 4);
+    ASSERT_TRUE(second == 3);
+    ASSERT_TRUE(third == 2);
+}
+
+TEST(PracticeTest, mixed_order_3)
+{
+    Practice obj;
+    int first = 3;
+    int second = 4;
+    int third = 2;
+    obj.sortDescending(first, second, third);
+    ASSERT_TRUE(first == 4);
+    ASSERT_TRUE(second == 3);
+    ASSERT_TRUE(third == 2);
+}
+
+TEST(PracticeTest, mixed_order_4)
+{
+    Practice obj;
+    int first = 3;
+    int second = 2;
+    int third = 4;
+    obj.sortDescending(first, second, third);
+    ASSERT_TRUE(first == 4);
+    ASSERT_TRUE(second == 3);
+    ASSERT_TRUE(third == 2);
+}
