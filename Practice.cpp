@@ -7,14 +7,27 @@ using std::string;
 // descending order from greatest (first) to least (third)
 void Practice::sortDescending(int & first, int & second, int & third)
 {
-  int array[] = {first, second, third};
-  int n = sizeof(array)/sizeof(array[0]); 
-  sort(array, array+n, greater<int>());
-  first = array[0];
-  second = array[1];
-  third = array[2];
+  // 2 3 4
+  if( first < second )
+  {
+    int temp = first;
+    first = second;
+    second = temp;
+  } // 3 2 4
+  if( second < third )
+  {
+    int temp = second;
+    second = third;
+    third = temp;
+  } // 3 4 2
+  if( first < third )
+  {
+    int temp = first;
+    first = third;
+    third = temp;
+  }
 }
-      
+// 2 3 4      3 2 4    3 4 2       
 
 // Receive a string and return whether or not it is strictly a palindrome,
 // where it is spelled the same backwards and forwards when considering every
