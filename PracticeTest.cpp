@@ -141,7 +141,7 @@ TEST(PracticeTest, given_two_of_the_same_value_false)
     ASSERT_FALSE(third == 4);
 }
 
-TEST(PracticeTest, given_two_of_the_same_value)
+TEST(PracticeTest, given_two_of_the_same_value_dif_order)
 {
     Practice obj;
     int first = 4;
