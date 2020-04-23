@@ -8,7 +8,7 @@ using std::string;
 void Practice::sortDescending(int & first, int & second, int & third)
 {
   int array[] = {first, second, third};
-  int n = sizeof(arr)/sizeof(arr[0]); 
+  int n = sizeof(array)/sizeof(array[0]); 
   sort(array, array+n, greater<int>());
   first = array[0];
   second = array[1];
