@@ -144,8 +144,8 @@ TEST(PracticeTest, given_two_of_the_same_value_false)
 TEST(PracticeTest, given_two_of_the_same_value_dif_order)
 {
     Practice obj;
-    int first = 4;
-    int second = 3;
+    int first = 3;
+    int second = 4;
     int third = 4;
     obj.sortDescending(first, second, third);
     ASSERT_TRUE(first == 4);
@@ -153,7 +153,7 @@ TEST(PracticeTest, given_two_of_the_same_value_dif_order)
     ASSERT_TRUE(third == 3);
 }
 
-TEST(PracticeTest, mixed_order_1)
+TEST(PracticeTest, mixed_order_243)
 {
     Practice obj;
     int first = 2;
@@ -165,7 +165,7 @@ TEST(PracticeTest, mixed_order_1)
     ASSERT_TRUE(third == 2);
 }
 
-TEST(PracticeTest, mixed_order_2)
+TEST(PracticeTest, mixed_order_423)
 {
     Practice obj;
     int first = 4;
@@ -177,7 +177,7 @@ TEST(PracticeTest, mixed_order_2)
     ASSERT_TRUE(third == 2);
 }
 
-TEST(PracticeTest, mixed_order_3)
+TEST(PracticeTest, mixed_order_342)
 {
     Practice obj;
     int first = 3;
@@ -189,7 +189,7 @@ TEST(PracticeTest, mixed_order_3)
     ASSERT_TRUE(third == 2);
 }
 
-TEST(PracticeTest, mixed_order_4)
+TEST(PracticeTest, mixed_order_324)
 {
     Practice obj;
     int first = 3;
