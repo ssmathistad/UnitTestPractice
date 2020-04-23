@@ -14,6 +14,8 @@ class PracticeTest : public ::testing::Test
 		virtual void TearDown(){} //clean up after each test, (before destructor)
 };
 
+// Tests for isPalindrome
+
 TEST(PracticeTest, is_simple_palindrome)
 {
     Practice obj;
@@ -49,6 +51,13 @@ TEST(PracticeTest, not_palindrome_from_start_to_end)
     ASSERT_FALSE(actual);
 }
 
+TEST(PracticeTest, case_insensitive_not_palindrome_from_start_to_end)
+{
+    Practice obj;
+    bool actual = obj.isPalindrome("aAB");
+    ASSERT_FALSE(actual);
+}
+
 TEST(PracticeTest, racecar_palindrome)
 {
     Practice obj;
@@ -56,9 +65,30 @@ TEST(PracticeTest, racecar_palindrome)
     ASSERT_TRUE(actual);
 }
 
+TEST(PracticeTest, racecpr_not_palindrome)
+{
+    Practice obj;
+    bool actual = obj.isPalindrome("racecpr");
+    ASSERT_FALSE(actual);
+}
+
 TEST(PracticeTest, tattarrattat_palindrome)
 {
     Practice obj;
     bool actual = obj.isPalindrome("tattarrattat");
     ASSERT_TRUE(actual);
+}
+
+// Tests for sortDescending
+
+TEST(PracticeTest, in_asc_order)
+{
+    Practice obj;
+    first = 2;
+    second = 3;
+    third = 4;
+    obj.sortDescending(first, second, third);
+    ASSERT_TRUE(first == 4);
+    ASSERT_TRUE(second == 3);
+    ASSERT_TRUE(third == 2);
 }
