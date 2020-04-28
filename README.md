@@ -1,3 +1,3 @@
 # UnitTestPractice
 
-[![Build Status](https://travis-ci.org/ssmathistad/UnitTestPractice.svg?branch=master)](https://travis-ci.org/ssmathistad/UnitTestPractice)
+[![Coverage Status](https://coveralls.io/repos/github/ssmathistad/UnitTestPractice/badge.svg?branch=master)](https://coveralls.io/github/ssmathistad/UnitTestPractice?branch=master)
